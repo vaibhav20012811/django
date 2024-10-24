@@ -9,8 +9,8 @@ class EcomUser(models.Model):
     state = models.CharField(max_length=100, blank=True, null=True)
     is_active = models.BooleanField(default=True)
     # Auto fields for timestamps
-    created_at = models.DateTimeField(auto_now_add=True, default=timezone.now)
-    updated_at = models.DateTimeField(auto_now=True, default=timezone.now)
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         db_table = 'ecom_user'

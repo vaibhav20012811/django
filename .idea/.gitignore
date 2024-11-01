@@ -2,3 +2,5 @@
 /shelf/
 /workspace.xml
 /logs/
+/ecom_app/__pycache__/
+/ecom_config/__pycache__/

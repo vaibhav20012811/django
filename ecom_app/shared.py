@@ -1,9 +1,9 @@
 
 def basic_response_translator(is_success, data, total_count=None, start=None, end=None):
     response_translator = {}
-    response_translator["success"] = is_success
+    response_translator["Success"] = is_success
     if total_count:
-        response_translator["total_count"] = total_count
+        response_translator["Total_count"] = total_count
     elif total_count == 0:
         response_translator["total_count"] = total_count
     if start:
@@ -14,5 +14,5 @@ def basic_response_translator(is_success, data, total_count=None, start=None, en
         response_translator["end"] = end
     elif end == 0:
         response_translator["end"] = end
-    response_translator["data"] = data
+    response_translator["Data"] = data
     return response_translator

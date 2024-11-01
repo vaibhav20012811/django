@@ -12,6 +12,5 @@ COPY . /app/
 
 EXPOSE 8000
 
-# CMD ["gunicorn", "--workers", "3", "--bind", "0.0.0.0:8000", "ecom_config.wsgi:application"]
-CMD ["gunicorn", "--workers", "1", "--bind", "0.0.0.0:8000", "--log-level=debug", "ecom_config.wsgi:application"]
+CMD ["gunicorn", "--workers", "3", "--bind", "0.0.0.0:8000", "ecom_config.wsgi:application"]
 

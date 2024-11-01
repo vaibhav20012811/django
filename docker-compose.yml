@@ -3,8 +3,6 @@ version: "3.8"
 services:
   web:
     build: .
-    context: .
-    dockerfile: Dockerfile
     container_name: ecom_app
     command: "gunicorn --workers 3 --bind 0.0.0.0:8000 ecom_config.wsgi:application" # --access-logfile - --error-logfile
     volumes:

@@ -8,9 +8,11 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 """
 
 import os
+import sys
+print(sys.path)
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "gunicorn ecom_config.wsgi:application")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ecom_config.settings")
 
 application = get_wsgi_application()

@@ -15,6 +15,7 @@ services:
     ports:
       - "8000:8000"
     environment:
+      - PYTHONPATH=/app
       - DB_NAME=ecom_DEV
       - DB_USER=postgres
       - DB_PASSWORD=Vaibhav@123

@@ -13,4 +13,4 @@ RUN ls
 EXPOSE 8000
 
 # CMD ["gunicorn", "--workers", "3", "--bind", "0.0.0.0:8000", "ecom_config.wsgi:application"]
-CMD ["cd", "..", "&&", "python3", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]

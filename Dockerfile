@@ -7,10 +7,7 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app/
-RUN cd ..
-RUN ls
 
 EXPOSE 8000
 
-# CMD ["gunicorn", "--workers", "3", "--bind", "0.0.0.0:8000", "ecom_config.wsgi:application"]
-CMD ["python3", "/app/manage.py", "runserver", "0.0.0.0:8000"]
+ENTRYPOINT  ["gunicorn", "--workers", "3", "--bind", "0.0.0.0:8000", "ecom_config.wsgi:application"]
